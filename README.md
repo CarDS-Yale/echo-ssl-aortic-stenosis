@@ -48,4 +48,4 @@ To reproduce the results in the paper,
 
 ## Contact
 
-Contact me (Greg Holste) at gholste@utexas.edu with any questions!
+Reach out to Greg Holste (gholste@utexas.edu) and Rohan Khera (rohan.khera@yale.edu) with any questions!
