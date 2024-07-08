@@ -1,8 +1,8 @@
-# Self-supervised contrastive learning of echocardiogram videos enables label-efficient cardiac disease diagnosis
+# Efficient deep learning-based automated diagnosis from echocardiography with contrastive self-supervised learning
 
-[**Gregory Holste**](https://gholste.me), Evangelos K. Oikonomou, Bobak J. Mortazavi, Zhangyang Wang, [**Rohan Khera**](https://www.cards-lab.org/team)
+[**Gregory Holste**](https://gholste.me), Evangelos K. Oikonomou, Bobak J. Mortazavi, Zhangyang Wang, [**Rohan Khera**](https://www.cards-lab.org/current)
 
-### [***arXiv preprint***](https://arxiv.org/abs/2207.11581) | 10 September 2023
+### [***Communications Medicine***](https://www.nature.com/articles/s43856-024-00538-3) | 6 July 2024
 
 (For a previous version of this paper presented at the ICML workshop, [IMLH 2022](https://sites.google.com/view/imlh2022/home?authuser=0), see the `imlh-2022/` directory.)
 
@@ -11,7 +11,7 @@
 ## Description
 
 <p align=center>
-    <img src=figs/overview_fig_v4.png height=500>
+    <img src=figs/overview_fig_v6.png height=500>
 </p>
 
 **Overview of EchoCLR, a self-supervised learning approach for echocardiography.** Unlike standard contrastive learning methods, two distinct videos of each patient acquired during a single exam are randomly sampled and deemed positive pairs for “multi-instance” contrastive learning (A). The frames of each video are then randomly shuffled along the temporal axis and fed into a 3D CNN, which learns similar representations of distinct videos from the same patient and dissimilar representations of videos from different patients (B). These video-level representations are then used to directly predict the order of shuffled video frames. This frame reordering pretext task encourages temporal coherence, which we demonstrate to be beneficial for downstream echocardiogram video-based disease classification tasks (C). After self-supervised pretraining, the 3D CNN backbone can then be efficiently fine-tuned for cardiac disease classification based on very few labeled echocardiograms.
@@ -34,13 +34,15 @@ To reproduce the results in the paper,
 ## Citation
 
 ```
-@misc{holste2023selfsupervised,
-      title={Self-supervised contrastive learning of echocardiogram videos enables label-efficient cardiac disease diagnosis}, 
-      author={Gregory Holste and Evangelos K. Oikonomou and Bobak J. Mortazavi and Zhangyang Wang and Rohan Khera},
-      year={2023},
-      eprint={2207.11581},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{holste2024efficient,
+  title={Efficient deep learning-based automated diagnosis from echocardiography with contrastive self-supervised learning},
+  author={Holste, Gregory and Oikonomou, Evangelos K and Mortazavi, Bobak and Wang, Zhangyang and Khera, Rohan},
+  journal={Communications Medicine},
+  year={2024},
+  month={7},
+  volume={4},
+  doi={10.1038/s43856-024-00538-3},
+  url={https://doi.org/10.1038/s43856-024-00538-3}
 }
 ```
 
